@@ -10,8 +10,8 @@ int main(){
 
 	std::size_t rows;
 	std::size_t cols;
-	rows = 6;//cin>>rows;
-	cols = 5;//cin>>cols;
+	rows = 10;//cin>>rows;
+	cols = 17;//cin>>cols;
 
 	// Creating matrix[rows][cols]
 	type_t* matrx = new type_t[rows*cols];
@@ -19,15 +19,20 @@ int main(){
 	// Creating result[cols][rows]
 	type_t* result = new type_t[cols*rows];
 
-	// Initialize matrix and result
+	// Creating naive_result[cols][rows]
+	type_t* naive_result = new type_t[cols*rows];
+
+	// Initialize matrix and result and naive result
 	for(std::size_t i=0; i<rows; ++i){
 		for(std::size_t j=0; j<cols; ++j){
 			matrx[i*cols+j] = i*cols+j;//cin>>matrx[i][j];
 			result[j*rows+i] = 0;
+			naive_result[j*rows+i] = 0;
 		}
 	}
 
-	// Transpose matrix
+	// TEST Transpose matrix where the original matrix and resulting matrix are different
+	cout << "TEST Transpose matrix (Different)"<<endl;
 	ra::cache::matrix_transpose<type_t>(matrx,rows,cols,result);
 	
 	// Print matrix
@@ -37,7 +42,7 @@ int main(){
 		}
 		cout<<endl;
 	}
-	cout<<endl<<endl;
+	cout<<endl;
 
 	// Print result
 	for(std::size_t i=0; i<cols; ++i){
@@ -46,10 +51,39 @@ int main(){
 		}
 		cout<<endl;
 	}
+	cout<<endl;
+
+
+	// TEST Naive_Transpose matrix
+	cout << "TEST Naive Transpose matrix"<<endl;
+	ra::cache::naive_matrix_transpose<type_t>(matrx,rows,cols,naive_result);
+
+	// Print naive_result
+	for(std::size_t i=0; i<cols; ++i){
+		for(std::size_t j=0; j<rows; ++j){
+			cout<<naive_result[i*rows+j]<<" ";
+		}
+		cout<<endl;
+	}
+	cout<<endl;
+
+
+	// TEST Transpose matrix where the original matrix and resulting matrix are the same
+	cout<< "TEST Transpose matrix (in-place)" <<endl;
+	ra::cache::matrix_transpose<type_t>(matrx,rows,cols,matrx);
+
+	// Print matrix in-place transposed
+	for(std::size_t i=0; i<cols; ++i){
+		for(std::size_t j=0; j<rows; ++j){
+			cout<<matrx[i*rows+j]<<" ";
+		}
+		cout<<endl;
+	}
 
 	// Delete matrix and result
 	delete[] matrx;
 	delete[] result;
+	delete[] naive_result;
 
 
 

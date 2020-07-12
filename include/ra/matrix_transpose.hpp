@@ -28,14 +28,14 @@ namespace ra::cache {
 
 		// If matrix a and b are the same, create a buffer matrix to store computation
 		bool flag_a_is_b = false;
-		//T* old_b = b;
-		if(b == a){ // Handle a and b being the same
+		T* old_b = b; // old_b = b = a
+		if(b == a){
 			b = new T[m*n];
 			flag_a_is_b = true;
 		}
 
 		// Base case
-		if((m*n)<=2){
+		if((m*n)<=64){
 			for(std::size_t i=0; i<m; ++i){
 				for(std::size_t j=0; j<n; ++j){
 					*(b+(j*M+i)) = *(a+(i*N+j));
@@ -66,14 +66,12 @@ namespace ra::cache {
 			}
 		}
 		
-		// If matrix a and b were same and we created buffer matrix, copy back to a and free buffer
-		if(flag_a_is_b){ // If a and old b were same, copy b into pointer pointing to same as a	
-			/*for(std::size_t i=0; i<(m*n); ++i){
+		// If matrix a and b were same and we created buffer matrix, copy back b to a
+		if(flag_a_is_b){	
+			for(std::size_t i=0; i<(m*n); ++i){ // remember old_b = a
 				*(old_b+i) = *(b+i);
-			}*/
-			//delete[] b;
-			delete[] a;
-			a = b;	
+			}
+			delete[] b; // free buffer matrix
 		}
 	}
 
