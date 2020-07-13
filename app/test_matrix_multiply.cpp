@@ -8,9 +8,9 @@ int main(){
 	using std::endl;
 	using type_t = double;
 
-	std::size_t M = 5;
-	std::size_t N = 4;
-	std::size_t P = 3;
+	std::size_t M = 10;
+	std::size_t N = 7;
+	std::size_t P = 4;
 
 	// Creating A[M][N]
 	type_t* A = new type_t[M*N];
@@ -85,6 +85,12 @@ int main(){
 		cout<<endl;
 	}
 	cout<<endl;
+
+	// Free
+	delete[] A;
+	delete[] B;
+	delete[] C;
+	delete[] naive_C;
 
 
 
