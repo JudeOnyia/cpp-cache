@@ -1,17 +1,17 @@
 #include "ra/matrix_transpose.hpp"
 #include<iostream>
 #include<cstddef>
+#include<complex>
 
 int main(){
-	using std::cin;
 	using std::cout;
 	using std::endl;
 	using type_t = double;
 
 	std::size_t rows;
 	std::size_t cols;
-	rows = 10;//cin>>rows;
-	cols = 17;//cin>>cols;
+	rows = 10;
+	cols = 17;
 
 	// Creating matrix[rows][cols]
 	type_t* matrx = new type_t[rows*cols];
@@ -25,7 +25,7 @@ int main(){
 	// Initialize matrix and result and naive result
 	for(std::size_t i=0; i<rows; ++i){
 		for(std::size_t j=0; j<cols; ++j){
-			matrx[i*cols+j] = i*cols+j;//cin>>matrx[i][j];
+			matrx[i*cols+j] = i*cols+j;
 			result[j*rows+i] = 0;
 			naive_result[j*rows+i] = 0;
 		}

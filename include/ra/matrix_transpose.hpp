@@ -14,17 +14,7 @@ namespace ra::cache {
 
 
 	template <class T>
-	void matrix_transpose(const T* a, std::size_t m, std::size_t n, T* b){
-
-		// Preserve the values of the original number of rows and columns
-		static int initialized_original_lenghts = 0;
-		static std::size_t M;
-		static std::size_t N;
-		if(!initialized_original_lenghts){
-			M = m;
-			N = n;
-			initialized_original_lenghts = 1;
-		}
+	void matrix_transpose_recurse(const T* a, std::size_t m, std::size_t n, T* b, std::size_t M, std::size_t N){
 
 		// If matrix a and b are the same, create a buffer matrix to store computation
 		bool flag_a_is_b = false;
@@ -51,8 +41,8 @@ namespace ra::cache {
 				const T* a2 = a + (m1*N); // pointer to first element in A2
 				T* b1 = b; // pointer to first element in B1
 				T* b2 = b + m1; // pointer to first element in B2
-				matrix_transpose(a1,m1,n,b1);
-				matrix_transpose(a2,m2,n,b2);
+				matrix_transpose_recurse(a1,m1,n,b1,M,N);
+				matrix_transpose_recurse(a2,m2,n,b2,M,N);
 			}
 			else{ // Divide n
 				std::size_t n1 = n / 2; // Number of columns in A1
@@ -61,8 +51,8 @@ namespace ra::cache {
 				const T* a2 = a + n1; // pointer to first element in A2
 				T* b1 = b; // pointer to first element in B1
 				T* b2 = b + (n1*M); // pointer to first element in B2
-				matrix_transpose(a1,m,n1,b1);
-				matrix_transpose(a2,m,n2,b2);
+				matrix_transpose_recurse(a1,m,n1,b1,M,N);
+				matrix_transpose_recurse(a2,m,n2,b2,M,N);
 			}
 		}
 		
@@ -73,6 +63,12 @@ namespace ra::cache {
 			}
 			delete[] b; // free buffer matrix
 		}
+	}
+
+
+	template <class T>
+	void matrix_transpose(const T* a, std::size_t m, std::size_t n, T* b){
+		matrix_transpose_recurse(a,m,n,b,m,n);
 	}
 
 
