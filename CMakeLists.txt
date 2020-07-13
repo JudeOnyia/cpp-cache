@@ -14,3 +14,4 @@ include_directories(include)
 # Add Executable Program
 add_executable(test_matrix_transpose app/test_matrix_transpose.cpp)
 add_executable(test_matrix_multiply app/test_matrix_multiply.cpp)
+add_executable(test_fft app/test_fft.cpp)
