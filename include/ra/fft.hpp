@@ -1,11 +1,11 @@
 #ifndef FFTHPP
 #define FFTHPP
 #include<cstddef>
-#include "ra/matrix_transpose.hpp" // void matrix_transpose(const T* a, std::size_t m, std::size_t n, T* b)
+#include "ra/matrix_transpose.hpp"
 #include<limits>
 #include<boost/math/constants/constants.hpp>
-#include<cmath> // std::sqrt(#)  and  std::log2(#)  and std::pow(base_size_t, power_size_t)
-#include<complex> // std::pow(base_complex, power_complex)
+#include<cmath>
+#include<complex>
 
 namespace ra::cache {
 
