@@ -1,0 +1,15 @@
+CMake Error at CMakeLists.txt:1 (include):
+  include could not find load file:
+
+    Sanitizers.cmake
+
+
+-- The CXX compiler identification is GNU 9.3.0
+-- Check for working CXX compiler: /home/frodo/public/ugls_lab-4.0.70/bin/c++
+-- Check for working CXX compiler: /home/frodo/public/ugls_lab-4.0.70/bin/c++ - works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring incomplete, errors occurred!
+See also "/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-fft_orig/derived/CMakeFiles/CMakeOutput.log".

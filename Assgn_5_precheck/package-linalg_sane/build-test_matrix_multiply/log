@@ -1,0 +1,24 @@
+/home/frodo/public/ugls_lab-4.0.70/packages/cmake-3.17.1/bin/cmake -S/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/source -B/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/gmake  -f CMakeFiles/Makefile2 test_matrix_multiply
+gmake[1]: Entering directory `/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived'
+/home/frodo/public/ugls_lab-4.0.70/packages/cmake-3.17.1/bin/cmake -S/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/source -B/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived --check-build-system CMakeFiles/Makefile.cmake 0
+/home/frodo/public/ugls_lab-4.0.70/packages/cmake-3.17.1/bin/cmake -E cmake_progress_start /home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived/CMakeFiles 2
+/usr/bin/gmake  -f CMakeFiles/Makefile2 CMakeFiles/test_matrix_multiply.dir/all
+gmake[2]: Entering directory `/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived'
+/usr/bin/gmake  -f CMakeFiles/test_matrix_multiply.dir/build.make CMakeFiles/test_matrix_multiply.dir/depend
+gmake[3]: Entering directory `/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived'
+cd /home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived && /home/frodo/public/ugls_lab-4.0.70/packages/cmake-3.17.1/bin/cmake -E cmake_depends "Unix Makefiles" /home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/source /home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/source /home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived /home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived /home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived/CMakeFiles/test_matrix_multiply.dir/DependInfo.cmake --color=
+Scanning dependencies of target test_matrix_multiply
+gmake[3]: Leaving directory `/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived'
+/usr/bin/gmake  -f CMakeFiles/test_matrix_multiply.dir/build.make CMakeFiles/test_matrix_multiply.dir/build
+gmake[3]: Entering directory `/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived'
+[ 50%] Building CXX object CMakeFiles/test_matrix_multiply.dir/app/test_matrix_multiply.cpp.o
+/home/frodo/public/ugls_lab-4.0.70/bin/c++   -I/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/source/include  -pedantic-errors -std=gnu++17 -o CMakeFiles/test_matrix_multiply.dir/app/test_matrix_multiply.cpp.o -c /home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/source/app/test_matrix_multiply.cpp
+[100%] Linking CXX executable test_matrix_multiply
+/home/frodo/public/ugls_lab-4.0.70/packages/cmake-3.17.1/bin/cmake -E cmake_link_script CMakeFiles/test_matrix_multiply.dir/link.txt --verbose=1
+/home/frodo/public/ugls_lab-4.0.70/bin/c++     CMakeFiles/test_matrix_multiply.dir/app/test_matrix_multiply.cpp.o  -o test_matrix_multiply 
+gmake[3]: Leaving directory `/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived'
+[100%] Built target test_matrix_multiply
+gmake[2]: Leaving directory `/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived'
+/home/frodo/public/ugls_lab-4.0.70/packages/cmake-3.17.1/bin/cmake -E cmake_progress_start /home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived/CMakeFiles 0
+gmake[1]: Leaving directory `/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived'

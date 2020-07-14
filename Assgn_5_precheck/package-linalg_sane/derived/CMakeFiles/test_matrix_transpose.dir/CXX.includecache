@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/source/app/test_matrix_transpose.cpp
+complex
+-
+ra/matrix_transpose.hpp
+/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/source/app/ra/matrix_transpose.hpp
+
+/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/source/include/ra/matrix_transpose.hpp
+cstddef
+-
+
