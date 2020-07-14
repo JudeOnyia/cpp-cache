@@ -2,17 +2,22 @@
 #define FFTHPP
 #include<cstddef>
 #include "ra/matrix_transpose.hpp" // void matrix_transpose(const T* a, std::size_t m, std::size_t n, T* b)
+#include<limits>
 #include<boost/math/constants/constants.hpp>
 #include<cmath> // std::sqrt(#)  and  std::log2(#)  and std::pow(base_size_t, power_size_t)
 #include<complex> // std::pow(base_complex, power_complex)
 
 namespace ra::cache {
-	const T T_pi =  boost::math::constants::pi<T>();
-	const T T_e = boost::math::constants::e<T>();
-	const T T_j = T(0,1);
 
-	template <class T>
-	void forward_fft(T* x, std::size_t n){
+	template <class K>
+	void forward_fft(std::complex<K>* x, std::size_t n){
+		using T = std::complex<K>;
+		static K K_pi(boost::math::constants::pi<K>());
+		static K K_e(boost::math::constants::e<K>());
+
+		static T T_pi(K_pi,0);
+		static T T_e(K_e,0);
+		static T T_j = T(0,1);
 
 		// base case
 		if(n<=4){
@@ -42,23 +47,23 @@ namespace ra::cache {
 			matrix_transpose(x, n1, n2, x); // Treat x as a x[n1][n2] matrix and transpose it in-place to x[n2][n1]
 
 			// Replace each row with n1-point DFT recursively
-			for(std:size_t i=0; i<n2; ++i){
+			for(std::size_t i=0; i<n2; ++i){
 				T* xi = x + (i*n1);
 				forward_fft(xi, n1);
 			}
 
 			// Muliply by twiddle factors
-			T WN = std::pow(T_e, (T_j * T(2,0) * T_pi / T(n,0)));
+			T WN = std::pow(T_e, -(T_j * T(2,0) * T_pi / T(n,0)));
 			for(std::size_t i=0; i<n2; ++i){
 				for(std::size_t j=0; j<n1; ++j){
-					x[i*n1+j] *= std::pow(WN, (-i*j));
+					x[i*n1+j] *= std::pow(WN, (i*j));
 				}
 			}
 
 			matrix_transpose(x, n2, n1, x); // Transpose x[n2][n1] in-place to x[n1][n2]
 
 			// Replace each row with n2-point DFT recursively
-			for(std:size_t i=0; i<n1; ++i){
+			for(std::size_t i=0; i<n1; ++i){
 				T* xi = x + (i*n2);
 				forward_fft(xi, n2);
 			}
