@@ -5,10 +5,28 @@
 namespace ra::cache {
 	template <class T>
 	void naive_matrix_transpose(const T* a, std::size_t m, std::size_t n, T* b){
+
+		// If matrix a and b are the same, create a buffer matrix to store computation
+		bool flag_a_is_b = false;
+		T* old_b = b; // old_b = b = a
+		if(b == a){
+			b = new T[m*n];
+			flag_a_is_b = true;
+		}
+
+		// Naive matrix transposition
 		for(std::size_t i=0; i<m; ++i){
 			for(std::size_t j=0; j<n; ++j){
 				b[j*m+i] = a[i*n+j];
 			}
+		}
+
+		// If matrix a and b were same and we created buffer matrix, copy back b to a
+		if(flag_a_is_b){	
+			for(std::size_t i=0; i<(m*n); ++i){ // remember old_b = a
+				*(old_b+i) = *(b+i);
+			}
+			delete[] b; // free buffer matrix
 		}
 	}
 
