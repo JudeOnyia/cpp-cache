@@ -30,7 +30,7 @@ namespace ra::cache {
 		}
 	}
 
-
+	// Helper function to pass more information during recursion
 	template <class T>
 	void matrix_transpose_recurse(const T* a, std::size_t m, std::size_t n, T* b, std::size_t M, std::size_t N){
 
@@ -84,6 +84,7 @@ namespace ra::cache {
 	}
 
 
+	// The actual function called
 	template <class T>
 	void matrix_transpose(const T* a, std::size_t m, std::size_t n, T* b){
 		matrix_transpose_recurse(a,m,n,b,m,n);

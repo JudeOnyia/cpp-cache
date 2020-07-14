@@ -1,5 +1,3 @@
-include(Sanitizers.cmake) # REMOVEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-
 # Specify Minimum Required Version
 cmake_minimum_required(VERSION 3.1 FATAL_ERROR)
 

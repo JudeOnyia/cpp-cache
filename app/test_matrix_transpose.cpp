@@ -78,15 +78,16 @@ int main(){
 		}
 		cout<<endl;
 	}
+	cout<<endl;
 
 	// TEST Naive_Transpose matrix where the original matrix and resulting matrix are the same
 	cout << "TEST Naive Transpose matrix (This transposes matrix back in-place)"<<endl;
-	ra::cache::naive_matrix_transpose<type_t>(matrx,rows,cols,matrx);
+	ra::cache::naive_matrix_transpose<type_t>(matrx,cols,rows,matrx);
 
 	// Print matrix in-place transposed
 	for(std::size_t i=0; i<rows; ++i){
 		for(std::size_t j=0; j<cols; ++j){
-			cout<<naive_result[i*cols+j]<<" ";
+			cout<<matrx[i*cols+j]<<" ";
 		}
 		cout<<endl;
 	}
