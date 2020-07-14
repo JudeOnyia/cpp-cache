@@ -1,6 +1,0 @@
-/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived/CMakeFiles/rebuild_cache.dir
-/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived/CMakeFiles/edit_cache.dir
-/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived/CMakeFiles/test.dir
-/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived/CMakeFiles/test_fft.dir
-/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived/CMakeFiles/test_matrix_multiply.dir
-/home/judeonyia/Documents/ECE596C_Assignments/ECE596C_Assgn_5/cpp_cache-JudeOnyia/Assgn_5_precheck/package-linalg_sane/derived/CMakeFiles/test_matrix_transpose.dir

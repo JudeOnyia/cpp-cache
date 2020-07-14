@@ -1,1 +1,0 @@
-../../../distribution//app/test_matrix_transpose.cpp
